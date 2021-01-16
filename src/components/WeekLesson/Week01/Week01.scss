@@ -1,0 +1,62 @@
+.Week01 {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    -webkit-column-width: 400px;
+    -moz-column-width: 400px;
+    column-width: 400px;
+    -moz-column-fill: auto;
+       column-fill: auto;
+
+    .lessonHeader {
+        position: relative;
+
+        .lessonImage{
+            width: 100%;
+        }
+
+        .lessonTitle {
+            position: absolute;
+            text-align: left;
+            top: 10px;
+            left: 10px;
+            width: 360px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            h1 {
+                right: 20px;
+            }
+        }
+    }
+
+    .mainText {
+        text-align: justify;
+        margin: 20px;
+    }
+
+    .subtitle {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .question {
+        padding-left: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+
+        textarea {
+            resize: vertical;
+            margin-top: 10px;
+            width: -webkit-calc(100% - 20px);
+            width:    -moz-calc(100% - 20px);
+            width:         calc(100% - 20px);
+
+            height: 100px;
+            font-size: 20px;
+        }
+
+
+    }
+}

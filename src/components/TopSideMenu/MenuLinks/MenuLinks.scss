@@ -1,0 +1,90 @@
+.nav {
+    .navLinks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100vh;
+        width: 250px;
+        background: #ffffff; 
+        transform: translateX(-250px);
+        transition: transform 0.3s;  
+        overflow: scroll;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            color: #666666;
+            padding: 12px 15px;
+            background: transform 0.2s;
+        }
+
+        .weekLink {
+            display: flex;
+            align-items: center;
+            color: #666666;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 12px 15px;
+            background: transform 0.2s;
+        }
+
+        .navIcon {
+            font-size: 18px;
+            margin-right:1vh;
+        }
+
+        .active {
+            color: #2E86C1;
+            background: #F8F9F9;
+        }
+
+        .weekLink:hover {
+            background: #D7DBDD;
+        }
+
+        .button_cont {
+            height: 14.5%;
+            position: relative;
+        }
+
+        .logOutBtn {
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: #494949 !important;
+            text-decoration: none;
+            background: #ffffff;
+            padding: 5px;
+            border: 2px solid #494949 !important;
+            font-size: 14px;
+        }
+    }
+
+    .navOverlay {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(1px);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+}
+
+.navOpen { 
+    .navLinks {
+        transform: translateX(0);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navOverlay {
+        visibility: visible;
+        opacity: 1;
+    }
+}

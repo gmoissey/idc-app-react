@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import LoggedIn from './components/LoggedIn/LoggedIn';
+import LoggedOut from './components/LoggedOut/LoggedOut';
+
+import firebase from 'firebase/app';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, db, googleAuthProvider } from './firebase/firebaseConfig';
+//import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 function App() {
-  return (
+  const [user] = useAuthState(auth);
+ 
+  return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? <LoggedIn auth={auth}/> : <LoggedOut auth={auth}/>} 
     </div>
   );
 }
