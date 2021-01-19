@@ -41,9 +41,6 @@ class MenuLinks extends React.Component {
                 Неделя {index + 1}
               </Link>
             ))}
-            <div className="button_cont" onClick={() => this.props.auth.signOut()}>
-              <Link to='/' className="logOutBtn">Logout</Link>
-            </div>
 
          
           </div>

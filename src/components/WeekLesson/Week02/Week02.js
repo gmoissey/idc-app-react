@@ -1,8 +1,6 @@
 import React from 'react';
 import './Week02.scss';
 
-import 'firebase/firestore';
-
 import Question from '../lessonComponents/Question/Question';
 import Paragraph from '../lessonComponents/Paragraph/Paragraph';
 import Title from '../lessonComponents/Title/Title';
