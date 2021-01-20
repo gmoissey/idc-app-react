@@ -10,6 +10,9 @@ import Week03 from './Week03/Week03';
 import Week04 from './Week04/Week04';
 import Week05 from './Week05/Week05';
 import Week06 from './Week06/Week06';
+import Week07 from './Week07/Week07';
+import Week08 from './Week08/Week08';
+import Week09 from './Week09/Week09';
 
 const WeekLesson = (props) => (
   <div className="WeekLesson" data-testid="WeekLesson">
@@ -33,6 +36,15 @@ const WeekLesson = (props) => (
         </Route>
         <Route path="/week06">
           <Week06></Week06>
+        </Route>
+        <Route path="/week07">
+          <Week07></Week07>
+        </Route>
+        <Route path="/week08">
+          <Week08></Week08>
+        </Route>
+        <Route path="/week09">
+          <Week09></Week09>
         </Route>
         <Route path="/profile">
           <ProfilePage></ProfilePage>
